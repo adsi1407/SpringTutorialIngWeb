@@ -1,10 +1,5 @@
 package co.edu.udea.iw.DTO;
 
-/**
- * 
- * @author Daniel Uribe Giraldo- Daniel.uribeg@udea.edu.co
- *
- */
 public class Ciudad {
 	private int codigo;
 	private String nombre;

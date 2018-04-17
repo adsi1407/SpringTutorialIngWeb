@@ -9,7 +9,7 @@
 	<bean id="dataSourceBean"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/IngWebDBql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/IngWebDB"/>
 		<property name="username" value="root"/>
 		<property name="password" value="root"/>
 	</bean>
@@ -18,9 +18,9 @@
 		<property name="dataSource" ref="dataSourceBean"/>
 		<property name="mappingResources">
 			<list>
-				<value>co/udea/udea/iw/DTO/Ciudad.hbm.xml</value>
-				<value>co/udea/udea/iw/DTO/Rol.hbm.xml</value>
-				<value>co/udea/udea/iw/DTO/Usuario.hbm.xml</value>
+				<value>co/edu/udea/iw/DTO/Ciudad.hbm.xml</value>
+				<value>co/edu/udea/iw/DTO/Rol.hbm.xml</value>
+				<value>co/edu/udea/iw/DTO/Usuario.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -32,5 +32,18 @@
 	</bean>
 	<bean id="ciudadDAOBean" class="co.edu.udea.iw.DAO.IMPL.CiudadDAOImpl">
 		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
+	<bean id="usuarioDAOBean" class="co.edu.udea.iw.DAO.IMPL.UsuarioDAOImpl">
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
+	<!--<bean id="clienteDAOBean" class="co.edu.udea.iw.DAO.IMPL.ClienteDAOImpl">
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>-->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="dataSource" ref="dataSourceBean"></property>
+		<property name="sessionFactory" ref="sessionFactoryBean"></property>
+	</bean>
+	
+	<bean id="clienteBLBean" class="co.edu.udea.iw.BL.IMPL.ClienteBLImpl">
 	</bean>
 </beans>
