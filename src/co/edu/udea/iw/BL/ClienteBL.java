@@ -8,5 +8,7 @@ import co.edu.udea.iw.EXCEPTION.ClassException;
 public interface ClienteBL {
 	
 	public List<Cliente> obtener() throws ClassException;
+	
+	public Cliente insertar(Cliente cliente) throws ClassException;
 
 }

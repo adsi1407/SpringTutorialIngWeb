@@ -12,7 +12,7 @@ public class Cliente {
 	Date fechaCreacion;
 	String usuarioModifica;
 	Date fechaModificacion;
-	Integer eliminado;
+	boolean eliminado;
 	String usuarioElimina;
 	Date fechaEliminacion;
 	
@@ -64,10 +64,10 @@ public class Cliente {
 	public void setFechaModificacion(Date fechaModificacion) {
 		this.fechaModificacion = fechaModificacion;
 	}
-	public Integer getEliminado() {
+	public boolean getEliminado() {
 		return eliminado;
 	}
-	public void setEliminado(Integer eliminado) {
+	public void setEliminado(boolean eliminado) {
 		this.eliminado = eliminado;
 	}
 	public String getUsuarioElimina() {

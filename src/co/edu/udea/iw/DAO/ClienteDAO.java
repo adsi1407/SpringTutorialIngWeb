@@ -7,8 +7,9 @@ import co.edu.udea.iw.EXCEPTION.ClassException;
 
 public interface ClienteDAO {
 
-	public void insertar(Cliente cliente) throws ClassException;
-	public void actualizar(Cliente cliente) throws ClassException;
+	public Cliente insertar(Cliente cliente) throws ClassException;
+	public Cliente actualizar(Cliente cliente) throws ClassException;
 	public void eliminar(Cliente cliente) throws ClassException;
+	public Cliente obtener(String cedula) throws ClassException;
 	public List<Cliente> obtener() throws ClassException;
 }
