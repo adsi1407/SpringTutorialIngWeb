@@ -1,12 +1,10 @@
-package co.edu.udea.iw.DAO;
+package co.edu.udea.iw.dao;
 
 import java.util.List;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.ClassException;
 
-import co.edu.udea.iw.DTO.Ciudad;
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
-
-public interface UsuarioDAO {
+public interface UsuarioDao {
 	public void insertar(Usuario usuario) throws ClassException;
 	public void actualizar(Usuario usuario) throws ClassException;
 	public void eliminar(Usuario usuario) throws ClassException;

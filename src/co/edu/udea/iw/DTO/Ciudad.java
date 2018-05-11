@@ -1,4 +1,4 @@
-package co.edu.udea.iw.DTO;
+package co.edu.udea.iw.dto;
 
 public class Ciudad {
 	private int codigo;

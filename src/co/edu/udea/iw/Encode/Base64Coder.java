@@ -1,5 +1,5 @@
 // Copyright 2003-2010 Christian d'Heureuse, Inventec Informatik AG, Zurich, Switzerland
-package co.edu.udea.iw.Encode;
+package co.edu.udea.iw.encode;
 // www.source-code.biz, www.inventec.ch/chdh
 //
 // This module is multi-licensed and may be used under the terms

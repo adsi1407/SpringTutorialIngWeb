@@ -1,9 +1,9 @@
-package co.edu.udea.iw.BL;
+package co.edu.udea.iw.bl;
 
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.ClassException;
 
-public interface UsuarioBL {
+public interface UsuarioBl {
 	
 	public Usuario autenticar(String login, String pws) throws ClassException;
 }

@@ -1,11 +1,11 @@
-package co.edu.udea.iw.DAO;
+package co.edu.udea.iw.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.exception.ClassException;
 
 public class DataSource {
 
@@ -18,7 +18,7 @@ public class DataSource {
 		Configuration configuration=new Configuration();
 		try {
 			if(sessionFactory==null){
-				configuration.configure("co/edu/udea/iw/DAO/hibernate.cfg.xml");
+				configuration.configure("co/edu/udea/iw/dao/hibernate.cfg.xml");
 				sessionFactory=configuration.buildSessionFactory();
 			}
 			return sessionFactory.openSession();

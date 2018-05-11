@@ -1,10 +1,5 @@
-package co.edu.udea.iw.EXCEPTION;
+package co.edu.udea.iw.exception;
 
-/**
- * 
- * @author Daniel Uribe Giraldo- Daniel.uribeg@udea.edu.co
- *
- */
 public class ClassException extends Exception {
 
 	public ClassException() {

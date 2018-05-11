@@ -1,14 +1,14 @@
-package co.edu.udea.iw.DAO.IMPL;
+package co.edu.udea.iw.dao.impl;
 
 import java.util.List;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import co.edu.udea.iw.DAO.UsuarioDAO;
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dao.UsuarioDao;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.ClassException;
 
-public class UsuarioDAOImpl extends HibernateDaoSupport implements UsuarioDAO {
+public class UsuarioDaoImpl extends HibernateDaoSupport implements UsuarioDao {
 
 	@Override
 	public void insertar(Usuario usuario) throws ClassException {

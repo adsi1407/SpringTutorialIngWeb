@@ -1,4 +1,4 @@
-package co.edu.udea.iw.Encode;
+package co.edu.udea.iw.encode;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

@@ -12,18 +12,17 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import co.edu.udea.iw.DAO.UsuarioDAO;
-import co.edu.udea.iw.DAO.IMPL.UsuarioDAOImpl;
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dao.UsuarioDao;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.ClassException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:springConfig.xml")
 @Transactional
-public class UsuarioDAOHibernateTest {
+public class UsuarioDaoHibernateTest {
 
 	@Autowired
-	UsuarioDAO dao;
+	UsuarioDao dao;
 	
 	@Test
 	public void testObtener() {

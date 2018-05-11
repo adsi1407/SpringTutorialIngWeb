@@ -1,11 +1,11 @@
-package co.edu.udea.iw.BL;
+package co.edu.udea.iw.bl;
 
 import java.util.List;
 
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.ClassException;
 
-public interface ClienteBL {
+public interface ClienteBl {
 	
 	public List<Cliente> obtener() throws ClassException;
 	

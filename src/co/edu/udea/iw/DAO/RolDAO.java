@@ -1,12 +1,10 @@
-package co.edu.udea.iw.DAO;
+package co.edu.udea.iw.dao;
 
 import java.util.List;
+import co.edu.udea.iw.dto.Rol;
+import co.edu.udea.iw.exception.ClassException;
 
-import co.edu.udea.iw.DTO.Ciudad;
-import co.edu.udea.iw.EXCEPTION.ClassException;
-import co.edu.udea.iw.DTO.Rol;
-
-public interface RolDAO {
+public interface RolDao {
 	public void insertar(Rol rol) throws ClassException;
 	public void actualizar(Rol rol) throws ClassException;
 	public void eliminar(Rol rol) throws ClassException;

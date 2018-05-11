@@ -1,20 +1,20 @@
-package co.edu.udea.iw.BL.IMPL;
+package co.edu.udea.iw.bl.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import co.edu.udea.iw.BL.ClienteBL;
-import co.edu.udea.iw.DAO.ClienteDAO;
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.EXCEPTION.ClassException;
-import co.edu.udea.iw.Validations.Validaciones;
+import co.edu.udea.iw.bl.ClienteBl;
+import co.edu.udea.iw.dao.ClienteDao;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.ClassException;
+import co.edu.udea.iw.validations.Validaciones;
 
-public class ClienteBLImpl implements ClienteBL {
+public class ClienteBlImpl implements ClienteBl {
 
 	@Autowired
-	ClienteDAO clienteDao;
+	ClienteDao clienteDao;
 	
 	@Override
 	public List<Cliente> obtener() throws ClassException {

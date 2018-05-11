@@ -1,4 +1,4 @@
-package co.edu.udea.iw.DAO.IMPL;
+package co.edu.udea.iw.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,13 +9,11 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
-import org.springframework.transaction.annotation.Transactional;
+import co.edu.udea.iw.dao.ClienteDao;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.ClassException;
 
-import co.edu.udea.iw.DAO.ClienteDAO;
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.EXCEPTION.ClassException;
-
-public class ClienteDAOImpl extends HibernateDaoSupport implements ClienteDAO {
+public class ClienteDaoImpl extends HibernateDaoSupport implements ClienteDao {
 
 	@Override
     public Cliente insertar(Cliente cliente) throws ClassException {
@@ -95,7 +93,7 @@ public class ClienteDAOImpl extends HibernateDaoSupport implements ClienteDAO {
         }catch(HibernateException e){
             throw new ClassException(e);
         }finally{
-//          session.close();
+        	session.close();
         }
         
         return clientes;

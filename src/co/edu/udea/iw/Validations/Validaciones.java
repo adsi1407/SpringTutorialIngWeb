@@ -1,9 +1,9 @@
-package co.edu.udea.iw.Validations;
+package co.edu.udea.iw.validations;
 
 import java.util.ArrayList;
 
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.DTO.Usuario;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.dto.Usuario;
 
 public class Validaciones {
 	

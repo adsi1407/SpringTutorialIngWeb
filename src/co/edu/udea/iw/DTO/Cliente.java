@@ -1,4 +1,4 @@
-package co.edu.udea.iw.DTO;
+package co.edu.udea.iw.dto;
 
 import java.util.Date;
 

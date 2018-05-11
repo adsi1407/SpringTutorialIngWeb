@@ -1,20 +1,20 @@
-package co.edu.udea.iw.BL.IMPL;
+package co.edu.udea.iw.bl.impl;
 
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import co.edu.udea.iw.BL.UsuarioBL;
-import co.edu.udea.iw.DAO.UsuarioDAO;
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
-import co.edu.udea.iw.Encode.Cifrar;
-import co.edu.udea.iw.Validations.Validaciones;
+import co.edu.udea.iw.bl.UsuarioBl;
+import co.edu.udea.iw.dao.UsuarioDao;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.encode.Cifrar;
+import co.edu.udea.iw.exception.ClassException;
+import co.edu.udea.iw.validations.Validaciones;
 
-public class UsuarioBLImpl implements UsuarioBL {
+public class UsuarioBlImpl implements UsuarioBl {
 
 	@Autowired
-	UsuarioDAO usuarioDao;
+	UsuarioDao usuarioDao;
 	
 	@Override
 	public Usuario autenticar(String login, String pws) throws ClassException {

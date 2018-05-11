@@ -1,16 +1,11 @@
-package co.edu.udea.iw.DAO;
+package co.edu.udea.iw.dao;
 
-import co.edu.udea.iw.EXCEPTION.ClassException;
-import co.edu.udea.iw.DTO.Ciudad;
+import co.edu.udea.iw.dto.Ciudad;
+import co.edu.udea.iw.exception.ClassException;
+
 import java.util.List;
 
-
-/**
- * 
- * @author Daniel Uribe Giraldo- Daniel.uribeg@udea.edu.co
- * 
- */
-public interface CiudadDAO {
+public interface CiudadDao {
 
 	public void insertar(Ciudad ciudad) throws ClassException;
 	public void actualizar(Ciudad ciudad) throws ClassException;

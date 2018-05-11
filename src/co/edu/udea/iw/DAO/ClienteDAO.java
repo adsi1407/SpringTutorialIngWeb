@@ -1,11 +1,11 @@
-package co.edu.udea.iw.DAO;
+package co.edu.udea.iw.dao;
 
 import java.util.List;
 
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.exception.ClassException;
 
-public interface ClienteDAO {
+public interface ClienteDao {
 
 	public Cliente insertar(Cliente cliente) throws ClassException;
 	public Cliente actualizar(Cliente cliente) throws ClassException;

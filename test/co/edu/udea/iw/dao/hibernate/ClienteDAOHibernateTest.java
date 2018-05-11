@@ -8,13 +8,13 @@ import java.util.List;
 
 import org.junit.Test;
 
-import co.edu.udea.iw.DAO.ClienteDAO;
-import co.edu.udea.iw.DAO.IMPL.ClienteDAOImpl;
-import co.edu.udea.iw.DTO.Cliente;
-import co.edu.udea.iw.DTO.Usuario;
-import co.edu.udea.iw.EXCEPTION.ClassException;
+import co.edu.udea.iw.dao.ClienteDao;
+import co.edu.udea.iw.dao.impl.ClienteDaoImpl;
+import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.dto.Usuario;
+import co.edu.udea.iw.exception.ClassException;
 
-public class ClienteDAOHibernateTest {
+public class ClienteDaoHibernateTest {
 
 	@Test
 	public void insertar() {
@@ -22,7 +22,7 @@ public class ClienteDAOHibernateTest {
 		Usuario usuario = new Usuario();
 		usuario.setLogin("elver");
 		
-		ClienteDAO dao = null;
+		ClienteDao dao = null;
 		Cliente cliente = new Cliente();
 		cliente.setCedula("1234567890");
 		cliente.setNombres("Cliente1");
@@ -32,7 +32,7 @@ public class ClienteDAOHibernateTest {
 		cliente.setFechaCreacion(new Date());
 		
 		try {
-			dao = new ClienteDAOImpl();
+			dao = new ClienteDaoImpl();
 			dao.insertar(cliente);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -43,10 +43,10 @@ public class ClienteDAOHibernateTest {
 	@Test
 	public void testObtener() {
 		List<Cliente> clientes = new ArrayList<Cliente>();
-		ClienteDAO dao = null;
+		ClienteDao dao = null;
 		
 		try{
-			dao = new ClienteDAOImpl();
+			dao = new ClienteDaoImpl();
 			
 			clientes = dao.obtener();
 			
