@@ -7,6 +7,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.iw.dao.ClienteDao;
 import co.edu.udea.iw.dao.impl.ClienteDaoImpl;
@@ -14,6 +18,9 @@ import co.edu.udea.iw.dto.Cliente;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.ClassException;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations="classpath:springConfig.xml")
+@Transactional
 public class ClienteDaoHibernateTest {
 
 	@Test
