@@ -32,8 +32,6 @@ public class Usuario {
 		this.apellidos = apellidos;
 	}
 
-	
-
 	public String getContrasena() {
 		return contrasena;
 	}
