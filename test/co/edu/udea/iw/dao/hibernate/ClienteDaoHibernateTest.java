@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,13 +24,15 @@ import co.edu.udea.iw.exception.ClassException;
 @Transactional
 public class ClienteDaoHibernateTest {
 
+	@Autowired
+	ClienteDao dao;
+	
 	@Test
 	public void insertar() {
 		
 		Usuario usuario = new Usuario();
 		usuario.setLogin("elver");
 		
-		ClienteDao dao = null;
 		Cliente cliente = new Cliente();
 		cliente.setCedula("1234567890");
 		cliente.setNombres("Cliente1");
@@ -39,7 +42,6 @@ public class ClienteDaoHibernateTest {
 		cliente.setFechaCreacion(new Date());
 		
 		try {
-			dao = new ClienteDaoImpl();
 			dao.insertar(cliente);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -50,10 +52,8 @@ public class ClienteDaoHibernateTest {
 	@Test
 	public void testObtener() {
 		List<Cliente> clientes = new ArrayList<Cliente>();
-		ClienteDao dao = null;
 		
-		try{
-			dao = new ClienteDaoImpl();
+		try {
 			
 			clientes = dao.obtener();
 			
